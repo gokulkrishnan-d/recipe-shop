@@ -10,23 +10,23 @@ import { ShoppingListService } from '../shopping-list.service';
 export class ShoppingEditComponent implements OnInit {
 
   @ViewChild('name', {static: false}) ingredientName: ElementRef ;
-  @ViewChild('amount', {static: false}) ingredientAmount: ElementRef ;
+  @ViewChild('quantity', {static: false}) ingredientQuantity: ElementRef ;
   // @Output() shoppingArray =  new EventEmitter<Ingredient>();
   ingredientNameValue: string;
-  ingredientAmountValue: number;
+  ingredientQuantityValue: number;
   constructor(private slService: ShoppingListService) { }
 
   ngOnInit(): void {
   }
 
   addData(): void {
-    // this.shoppingArray.emit(new Ingredient(this.ingredientName.nativeElement.value, this.ingredientAmount.nativeElement.value));
+    // this.shoppingArray.emit(new Ingredient(this.ingredientName.nativeElement.value, this.ingredientQuantity.nativeElement.value));
     this.ingredientNameValue  = this.ingredientName.nativeElement.value;
-    this.ingredientAmountValue =  this.ingredientAmount.nativeElement.value;
-    if (this.ingredientAmountValue && this.ingredientNameValue) {
+    this.ingredientQuantityValue =  this.ingredientQuantity.nativeElement.value;
+    if (this.ingredientQuantityValue && this.ingredientNameValue) {
       this.slService.addItemsInIngredients(new Ingredient(
                                           this.ingredientName.nativeElement.value,
-                                          this.ingredientAmount.nativeElement.value));
+                                          this.ingredientQuantity.nativeElement.value));
     }
   }
 
