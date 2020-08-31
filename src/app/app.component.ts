@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'recipe-shop';
+  loadedFeature = 'recipe';
+  onSelected(feature: string): void{
+    this.loadedFeature = feature;
+  }
 }
