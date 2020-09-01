@@ -4,22 +4,22 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { ActiveUsersComponent } from './active-users/active-users.component';
-import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
-import { UsersServices } from './users.services';
-import { CounterService } from './counter.service';
+import { BasicHighlightDirective } from './basic-directive/basic-highlight.directive';
+import { BetterHighlightDirective } from './basic-directive/better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ActiveUsersComponent,
-    InactiveUsersComponent
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
   ],
-  providers: [UsersServices, CounterService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

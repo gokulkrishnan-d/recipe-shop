@@ -1,20 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { UsersServices } from './users.services';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.less']
 })
-export class AppComponent  {
-  // activeUsers : string[] = [];
-  // inactiveUsers : string[] = [];
+export class AppComponent {
+  // numbers = [1, 2, 3, 4, 5];
+  oddNum = [1, 3, 5, 6];
+  evenNum = [2, 4];
 
-  // constructor(private userAccounts: UsersServices) {}
-  // ngOnInit(): void {
-  //   this.activeUsers = this.userAccounts.activeUsers;
-  //   this.inactiveUsers = this.userAccounts.inactiveUsers;
-  // }
-
- 
+  onlyOdd = false;
+  value = 2;
 }
