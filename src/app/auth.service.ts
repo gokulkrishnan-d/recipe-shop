@@ -6,7 +6,7 @@ export class AuthService {
             (resolve, reject) => {
                 setTimeout(() => {
                     resolve(this.loggedIn);
-                }, 1000 );
+                }, 800 );
             }
         );
         return promise;
@@ -14,9 +14,11 @@ export class AuthService {
 
     login() {
         this.loggedIn = true;
+        alert('Login Successful!!');
     }
 
     loggedOut() {
         this.loggedIn = false;
+        alert('Success Logout');
     }
 }
