@@ -44,7 +44,9 @@ export class EditServerComponent implements OnInit, CanDeactivateService {
 
   onUpdateServer() {
     this.serversService.updateServer(this.server.id, {name: this.serverName, status: this.serverStatus});
-    this.router.navigate(['/servers', this.server.id], {queryParamsHandling: 'preserve', preserveFragment: true});
+    this.router.navigate(['/servers', this.server.id], {queryParamsHandling: 'preserve', preserveFragment: true, skipLocationChange: true});
+   // this.router.navigate(['/servers', this.server.id], {queryParamsHandling:
+   // 'preserve', preserveFragment: true, skipLocationChange: true});
     this.changesSaved = true;
     // this.router.navigate(['../'], {relativeTo: this.route});
   }
