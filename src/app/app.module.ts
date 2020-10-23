@@ -18,6 +18,8 @@ import { AuthService } from './auth.service';
 import { CanDeactivateGuard } from './servers/edit-server/can-canDeactivate-guard.service';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ServerResolver } from './servers/server-resolver.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { ServerResolver } from './servers/server-resolver.service';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ServersService, AuthGuard, AuthService, CanDeactivateGuard, ServerResolver],
   bootstrap: [AppComponent]
