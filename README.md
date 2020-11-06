@@ -41,3 +41,12 @@ If u are creating the own observable u need to unsubscribe once its finished , b
 - Observer( is a subscribe)*Handle Data  * Handle Error  *Handle completion 
   - it may never complete depends on requirements
   - mainly for the handling of asynchronous operations
+- ## Operators in Observables
+  - can build ur own operators which helps in Observable
+  - this can be used if u want to change some functionalities of predefined Observables/ can be used in custom also..
+  - # Reference https://www.learnrxjs.io/learn-rxjs/operators
+  - used by pipe operator
+  
+- ## Subjects in Observables
+  - A Subject is a special type of Observable which shares a single execution path among observers.
+  - can be used as event emitters.
