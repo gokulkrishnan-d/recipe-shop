@@ -35,3 +35,9 @@ ng g c recipes\recipe-start --skipTests=true
 ## Observables 
 
 If u are creating the own observable u need to unsubscribe once its finished , but for preDefined observables no need for that.
+
+- is a data source
+- just objects from lib(Events,Http Requests  etc)
+- Observer( is a subscribe)*Handle Data  * Handle Error  *Handle completion 
+  - it may never complete depends on requirements
+  - mainly for the handling of asynchronous operations
