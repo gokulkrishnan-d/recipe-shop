@@ -30,3 +30,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Generate Component Without spec
 
 ng g c recipes\recipe-start --skipTests=true
+
+
+## Observables 
+
+If u are creating the own observable u need to unsubscribe once its finished , but for preDefined observables no need for that.
