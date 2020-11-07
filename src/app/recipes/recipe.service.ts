@@ -27,7 +27,7 @@ export class RecipeService {
         this.slService.addIngredients(ingredients);
       }
 
-      getRecipe(id: number){
+      getRecipe(id: number) {
         return this.recipes.slice()[id]; // use a cope of the array
       }
 
